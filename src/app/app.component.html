@@ -1,2 +1,36 @@
-<h1>Hello Angular {{title}}</h1>
-<app-login> </app-login>
+
+<h1> Angular  {{title}}</h1>
+<!-- ---------event----------- -->
+<!-- <button (click)="getData('hello')" >Click me</button>
+<br /> <br />
+<input type="text" #box (keyup)="getData(box.value)" placeholder="key up event"/>
+
+<p (mouseover)="getData('over')"> event on paragraph</p>
+<h1 (mouseup)="getData('up')"> event on heading tag</h1> -->
+
+
+<!-- ---------get text box value and print------>
+<!-- <input type="text" #box placeholder="Enter Name" name="name" >
+<button (click)="getUsername(box.value)"> click </button>
+
+<p> value is: {{displayval}} </p> -->
+
+
+
+<!-- <button (click)="counter('minus')" > --</button>
+<p> count is: {{count}} </p>
+<button (click)="counter('add')"> ++  </button> -->
+
+<!-- <input type="text" name="username" value={{name}} disabled={{disable}}>
+<br> <br>
+<input type="text" name="username" [value]=name [disabled]=disable> -->
+
+<h1 *ngIf="show; then ifBlock else elseBlock "> </h1>
+
+<ng-template #ifBlock>
+    <h1>if condition </h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>else condition </h1>
+</ng-template>
