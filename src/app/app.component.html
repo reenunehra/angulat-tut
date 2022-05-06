@@ -1,73 +1,53 @@
 
 <h1> Angular  {{title}}</h1>
-<!-- ---------event----------- -->
-<!-- <button (click)="getData('hello')" >Click me</button>
-<br /> <br />
-<input type="text" #box (keyup)="getData(box.value)" placeholder="key up event"/>
 
-<p (mouseover)="getData('over')"> event on paragraph</p>
-<h1 (mouseup)="getData('up')"> event on heading tag</h1> -->
+<!--  basic form -->
 
+<!-- <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)" >
+    <input type="text" ngModel name="user" placeholder="enter your name" >
+    <br /> <br />
+    <input type="text" ngModel name="email" placeholder="enter your email" >
+    <br /> <br />
+    <input type="text" ngModel name="password" placeholder="enter your passwod" >
+    <br /> <br />
+    <button> Register </button>
+</form>
 
-<!-- ---------get text box value and print------>
-<!-- <input type="text" #box placeholder="Enter Name" name="name" >
-<button (click)="getUsername(box.value)"> click </button>
+<ul>
+    <li>{{userData.user}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.password}}</li>
+</ul> -->
 
-<p> value is: {{displayval}} </p> -->
-
-
-
-<!-- <button (click)="counter('minus')" > --</button>
-<p> count is: {{count}} </p>
-<button (click)="counter('add')"> ++  </button> -->
-
-<!-- <input type="text" name="username" value={{name}} disabled={{disable}}>
-<br> <br>
-<input type="text" name="username" [value]=name [disabled]=disable> -->
-
-<!-- <h1 *ngIf="show; then ifBlock else elseBlock "> </h1>
-
-<ng-template #ifBlock>
-    <h1>if condition </h1>
-</ng-template>
-
-<ng-template #elseBlock>
-    <h1>else condition </h1>
-</ng-template> -->
-
-<!-- <ng-template [ngIf]="color==='red' ">
-<h1 style="color: red;"> red-colore </h1>
-</ng-template>
-<ng-template [ngIf]="color==='green' ">
-<h1 style="color: green;"> green-colore </h1>
-</ng-template>
-<ng-template [ngIf]="color==='yellow' ">
-    <h1 style="color: yellow;"> green-colore </h1>
-    </ng-template> -->
-
-    <!-- <div [ngSwitch]="color">
-        <h1 *ngSwitchCase=" 'red' " style="color: red;" >Red color</h1>
-        <h1 *ngSwitchCase=" 'blue' " style="color: blue;" >Red color</h1>
-        <h1 *ngSwitchCase=" 'purple' " style="color: purple;" >Red color</h1>
-        <h1 *ngSwitchCase=" 'green' " style="color: green;" >Red color</h1>
-        <h1 *ngSwitchCase=" 'orange' " style="color: orange;" >Red color</h1>
-        
-        
-        <h1 *ngSwitchDefault > color is not defined </h1>
-    </div> -->
-
-    <!-- <h4 *ngFor="let item of users">Name is : {{item}}</h4>
-    <h4 *ngFor="let item of userDetails">info: {{item.name}}   -   {{item.email}}</h4> -->
+<!-- ----------------toggle---------------------- -->
 
 
-    <!-- <ul *ngFor="let user of users">
-        <li>Name is: {{user.name}}</li>
-        <li>Email is: {{user.email}}</li>
-        <li>socialAcounts</li>
-        <ul *ngFor="let account of user.socialAccount">
-            <li>{{account}}</li>
-        </ul>
-    </ul> -->
+<!-- <button (click)="toggle()">Toggle</button>
+<h1 style="color: red;"  *ngIf="display" >
+    Hey!!! I'm Reenu Nehra
+</h1> -->
 
-<h1 [style.color]="color"> {{colors}} </h1>
-<button (click)="change()" > click to update </button>
+
+<!-- -------------------todo list in angular------------------ -->
+
+<!-- <input type="text" placeholder="Enter new Task" #task />
+<br /><br />
+<button (click)="addTask(task.value)" > Add Task </button>
+
+<br />
+
+<ul *ngFor="let item of list">
+    <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button> </li>
+</ul> -->
+
+
+<!-- pass data child to parent component--------------------------------------- -->
+
+<!-- <app-child [item]="data" ></app-child>
+<button (click)="updateChild()">Update child component</button> -->
+
+
+<!-- // send data child to parent component----------------- -->
+
+<h1>{{data}}</h1>
+<app-child (updateDataEvent)="updateData($event)" > </app-child>

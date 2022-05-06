@@ -1,76 +1,62 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'blog';
-  data = 'by ReenuNehra';
+  title = "blog";
+  
 
-  //  getData(val: string){
+  // ------------form function-------------------
+  // userData:any={};
 
-  //   console.warn(val);
-
-  //  }
-  // ----get text box value and print-------
-  // displayval = ' ';
-  // getUsername(val: string) {
-  //   console.log(val);
-  //   this.displayval = val;
+  // getData(data:NgForm){
+  //   console.warn(data)
+  //   this.userData=data
   // }
 
-// count = 0;
-// counter(type:string){
-// type=== 'add' ? this.count++ : this.count--;
-// }
-
-// name = "reenu" 
-// disable = true
+  // <!-- ----------------toggle element function--------------------- -- >
+  // display = true;
+  // toggle() {
+  //   this.display = !this.display;
+  // }
 
 
-// show = false
-
-// color =  "frefrf";
-
-// users = ['Raam','Shaam','Peter','Sam','Rokky','Heyat'];
-
-// userDetails = [
-//   {name : 'Raam' , email : 'raam123@gmail.com'},
-//   {name : 'Shaam' , email : 'shaam13@gmail.com'},
-//   {name : 'peter' , email : 'peter@gmail.com'},
-//   {name : 'sam' , email : 'sam343@gmail.com'},
-//   {name : 'Rokky' , email : 'rokk23@gmail.com'},
-//   {name : 'heyat' , email : 'heyat2356@gmail.com'},
-// ]
-
-// users = [
-//   {name : 'Raam' , email : 'raam123@gmail.com', socialAccount:['facebook','insta','whtp']},
-//   {name : 'Shaam' , email : 'shaam13@gmail.com', socialAccount:['facebook','insta','whtp']},
-//   {name : 'peter' , email : 'peter@gmail.com', socialAccount:['facebook','insta','whtp']},
-// ]
- 
-
-colors = "color-update"
-color="red";
-
-change(){
-  this.color="blue"
-}
-
-
-
-}
-// -----clouser------------------
-
-// function addition (a) {
-//   let b = 20;
-//   function sumval(){
-//     let sum =a + b;
-//     console.log('${sum}')
+  // -------------todo list in angular------------
+//   list:any[]=[];
+//   addTask(item:string)
+//   {
+//     this.list.push({id:this.list.length, name:item})
+//     console.warn(this.list)
 //   }
-//   sumval();
-// }
-// addition(5);
 
+//   removeTask(id:number)
+//   {
+//     console.warn(id)
+//     this.list=this.list.filter(item => item.id!==id)
+//   }
+
+
+// <!-- pass data child to parent component--------------------------------------- -->
+
+// data=10;
+// updateChild()
+// {
+//   this.data= Math.floor(Math.random()*10)
+// }
+
+
+
+// send data child to parent component-----------------
+
+data="x";
+
+updateData(item:string)
+{
+  console.warn(item)
+  this.data=item;
+}
+}
